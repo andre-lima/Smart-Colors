@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.16.2",
     "fs-extra": "^3.0.1",
     "replacestream": "^4.0.2",
     "supports-color": "^3.2.3",
