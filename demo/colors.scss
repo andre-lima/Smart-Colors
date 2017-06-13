@@ -1,10 +1,10 @@
-$color_background : #E67399;
-$color_h1 : #59BFB3;
-$color-h2: #E0C240;
-$colorText :#F2A640;
-$color_interactive : #E67399;
-$color_active : #F2A640;
-$color_important : #B373B3;
+$color_background : #CDCDCD;  // disable smart-colors
+$color_h1 : #FFED61;
+$color-h2: #FFCC46;
+$colorText :#F1AA00;
+$color_interactive : #D87F00;
+$color_active : #C54F00;
+$color_important : #E02690;     //disable smart-colors   
 
 //Shouldn't be replaced since it fails the Regex test
 $color : black;

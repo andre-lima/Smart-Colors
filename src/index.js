@@ -67,7 +67,7 @@ const startModule = (function startModule() {
           const j = Math.floor(Math.random() * i);
           [colors[i - 1], colors[j]] = [colors[j], colors[i - 1]];
         }
-        
+
         readFileAndReplace(globalColorsVariablesFile, colors);
       });
   }

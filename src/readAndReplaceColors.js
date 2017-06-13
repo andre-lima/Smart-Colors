@@ -3,8 +3,8 @@ import replaceStream from 'replacestream';
 
 // Valid entries: $color_main : white | $color-main : rgb(11, 11, 11); | $colormain : #ABCABC; | $color_main : |
 // Invalid entries: $color : white | any other invalid SASS or SCSS variables syntax
-let colorStyleRegex = /(\$color)(\S+)( ?: ?)(.*)(;?)/g;
-
+// const colorStyleRegex = /(\$color)(\S+)( ?: ?)(.*)(;?)/g;
+const colorStyleRegex = /(\$color)(\S+)( ?: ?)(#\w*)(;?)(( *\/\/)( *)(disable smart-colors))?/g;
 let newFileContent = '';
 
 function readFileStream(globalColorsVariablesFile, colors) {
@@ -18,14 +18,17 @@ function readFileStream(globalColorsVariablesFile, colors) {
 
   // Copies the variable name and replaces the color at the end
   function nextColor(line, ...args) {
+    // If added the disable comment, skip this variable
+    if (args[8]) {
+      return line;
+    }
+
     // When colors array is empty, reload colors again
     if (colorsCopy.length === 0) {
       colorsCopy = [...colors];
     }
 
-    const addSemiColon = args[3].slice(-1) === ';' ? ';' : '';
-
-    return `${args[0]}${args[1]}${args[2]}${colorsCopy.shift()}${addSemiColon}`;
+    return `${args[0]}${args[1]}${args[2]}${colorsCopy.shift()}${args[4]}`;
   }
 
   function overwriteFile(string) {
