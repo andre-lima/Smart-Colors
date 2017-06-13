@@ -55,14 +55,13 @@ const startModule = (function startModule() {
   function shuffleColors() {
     let colors = [];
     let fileContent = '';
-    const hexColorRegex = /#([\w\d]{6})/g;
-
+    const hexColorRegex = /(#\w{6})/g;
     // Gets current colors from file and shuffles them
     fse.createReadStream(globalColorsVariablesFile)
       .on('data', (chunk) => { fileContent += chunk; })
       .on('end', () => {
         colors = fileContent.match(hexColorRegex);
-
+console.log(colors);
         for (let i = colors.length; i; --i) {
           const j = Math.floor(Math.random() * i);
           [colors[i - 1], colors[j]] = [colors[j], colors[i - 1]];
