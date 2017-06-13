@@ -3,12 +3,12 @@ import replaceStream from 'replacestream';
 
 // Valid entries: $color_main : white | $color-main : rgb(11, 11, 11); | $colormain : #ABCABC; | $color_main : |
 // Invalid entries: $color : white | any other invalid SASS or SCSS variables syntax
-let colorStyleRegex = /(\$color)(\S+)( ?: ?)(.*);?/g;
+let colorStyleRegex = /(\$color)(\S+)( ?: ?)(.*)(;?)/g;
 
 let newFileContent = '';
 
-function readFileStream(globalColorsVariablesFile, colors, colorsCopy) {
-  let cols = [...colors];
+function readFileStream(globalColorsVariablesFile, colors) {
+  let colorsCopy = [...colors];
   fse.createReadStream(globalColorsVariablesFile)
     .pipe(replaceStream(colorStyleRegex, nextColor)) // eslint-disable-line no-use-before-define
     .on('error', err => console.log(`Stream error:  + ${err}`))
@@ -19,10 +19,13 @@ function readFileStream(globalColorsVariablesFile, colors, colorsCopy) {
   // Copies the variable name and replaces the color at the end
   function nextColor(line, ...args) {
     // When colors array is empty, reload colors again
-    if (cols.length === 0) {
-      cols = [...colorsCopy];
+    if (colorsCopy.length === 0) {
+      colorsCopy = [...colors];
     }
-    return `${args[0]}${args[1]}${args[2]}${cols.shift()};`;
+
+    const addSemiColon = args[3].slice(-1) === ';' ? ';' : '';
+
+    return `${args[0]}${args[1]}${args[2]}${colorsCopy.shift()}${addSemiColon}`;
   }
 
   function overwriteFile(string) {

@@ -1,0 +1,22 @@
+body {
+  background: #CC0000;
+  font-family: sans-serif;
+  text-align: center; }
+
+.h1 {
+  color: #E63E10; }
+
+.h2 {
+  color: #E9F5A6; }
+
+.text {
+  color: #209A9E; }
+
+.button {
+  background: #171A26;
+  padding: 10px;
+  border-radius: 1em; }
+  .button:hover {
+    background: #E63E10; }
+  .button:active {
+    color: #CC0000; }

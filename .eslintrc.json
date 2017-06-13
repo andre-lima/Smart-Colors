@@ -11,7 +11,16 @@
       }
     ],
     "comma-dangle": "off",
-    "max-len": ["error", 120],
+    "max-len": [
+      "error",
+      120
+    ],
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
     "no-underscore-dangle": [
       0
     ]

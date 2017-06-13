@@ -1,0 +1,43 @@
+$color_background : #CC0000;
+$color_h1 : #E63E10;
+$color-h2: #E9F5A6;
+$colorText :#209A9E;
+$color_interactive : #171A26;
+$color_active : #CC0000;
+$color_important : #E63E10;
+
+//Shouldn't be replaced since it fails the Regex test
+$color : black;
+
+body {
+    background: $color_background;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.h1 {
+  color: $color_h1;
+}
+
+.h2 {
+  color: $color-h2;
+}
+
+.text {
+  color: $colorText;
+}
+
+.button {
+  background: $color_interactive;
+  padding: 10px;
+  border-radius: 1em;
+
+  &:hover {
+    background: $color_important;
+  }
+
+  &:active {
+    color: $color_active;
+  }
+
+}
