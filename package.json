@@ -8,8 +8,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "gulp && node index && gulp demo",
-    "demo": "node index && gulp demo",
+    "compile": "gulp",
+    "demo-new": "node demo/new && gulp demo",
+    "demo-shuffle": "node demo/shuffle && gulp demo",
     "lint": "eslint ./src && eslint ./*.js || exit 0"
   },
   "author": "Andre Dantas <andre.dantas.lima@gmail.com> (www.andredantas.com)",

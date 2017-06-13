@@ -13,7 +13,7 @@ gulp.task('index', function index() {
 });
 
 gulp.task('lib', function lib() {
-  return gulp.src('./src/*.js')
+  return gulp.src(['./src/*.js', '!./src/index.js'])
     .pipe(babel({
       presets: ['es2015', 'es2017']
     }))
