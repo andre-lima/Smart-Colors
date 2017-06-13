@@ -1,10 +1,10 @@
 {
-  "name": "replace-test",
-  "version": "1.0.0",
-  "description": "",
+  "name": "smart-colors",
+  "version": "0.0.1",
+  "description": "Shuffle between beatiful color palettes and apply then automatically to your SASS variables.",
   "main": "index.js",
   "bin": {
-    "never": "cli.js"
+    "smart": "cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,10 +12,11 @@
     "demo": "node index && gulp demo",
     "lint": "eslint ./src && eslint ./*.js || exit 0"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Andre Dantas <andre.dantas.lima@gmail.com> (www.andredantas.com)",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.16.2",
+    "commander": "^2.9.0",
     "fs-extra": "^3.0.1",
     "replacestream": "^4.0.2",
     "supports-color": "^3.2.3",

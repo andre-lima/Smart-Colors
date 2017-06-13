@@ -1,10 +1,10 @@
-$color_background : #CC0000;
-$color_h1 : #E63E10;
-$color-h2: #E9F5A6;
-$colorText :#209A9E;
-$color_interactive : #171A26;
-$color_active : #CC0000;
-$color_important : #E63E10;
+$color_background : #E2E2B6;
+$color_h1 : #93C088;
+$color-h2: #7A7223;
+$colorText :#402C2B;
+$color_interactive : #2B0A15;
+$color_active : #E2E2B6;
+$color_important : #93C088;
 
 //Shouldn't be replaced since it fails the Regex test
 $color : black;
@@ -21,6 +21,7 @@ body {
 
 .h2 {
   color: $color-h2;
+  text-shadow: 2px 2px $color_important;
 }
 
 .text {

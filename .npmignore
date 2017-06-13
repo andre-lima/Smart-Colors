@@ -1,7 +1,6 @@
 /node_modules
 /src
-.eslintrc
+/demo
 .eslintrc.json
 .editorconfig
-test.js
 gulpfile.js
