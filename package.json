@@ -1,18 +1,34 @@
 {
-  "name": "replace-test",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^0.16.2",
-    "fs-extra": "^3.0.1",
-    "replacestream": "^4.0.2",
-    "supports-color": "^3.2.3",
-    "terminal-kit": "^1.10.2"
-  }
+    "name": "replace-test",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "bin": {
+        "never": "cli.js"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "gulp && node index",
+        "show": "node index",
+        "lint": "eslint ./src && eslint ./*.js || exit 0"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.16.2",
+        "fs-extra": "^3.0.1",
+        "replacestream": "^4.0.2",
+        "supports-color": "^3.2.3",
+        "terminal-kit": "^1.10.2"
+    },
+    "devDependencies": {
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-es2017": "^6.24.1",
+        "eslint": "^3.19.0",
+        "eslint-config-airbnb-base": "^11.2.0",
+        "eslint-plugin-import": "^2.3.0",
+        "gulp": "^3.9.1",
+        "gulp-babel": "^6.1.2",
+        "gulp-uglify": "^2.1.2"
+    }
 }

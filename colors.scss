@@ -1,13 +1,14 @@
-SOME STUFF
+* {
+    background: $color-badass;
+}
 
-$colorwhite : #595E39;
-$color-badass: #FF842A;
-$color_red :#FFD416;
-$color_empty : #DBC046;
-$color_fifth : #F2FFC4;
-$color_sith : #595E39;
+$colorwhite :#F5FDFF;
+$color-badass :#F1FFE5;
+$color_red : #FDF7D2;
+$color_empty : #FFE9C8;
+$color_fifth : #DF0030;
 
 //Shouldn't be replaced
 $color : black;
 
-SOME OTHER STUFF
+$color_repeatefirst : #F5FDFF;
