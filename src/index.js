@@ -9,8 +9,8 @@ const readFileAndReplace = require('./lib/readAndReplaceColors');
 
 const startModule = (function startModule() {
   // Source variable file and backup file
-  const globalColorsVariablesFile = path.join(__dirname, './demo/colors.scss');
-  const backupVariablesFile = path.join(__dirname, './demo/colors_BKP.scss');
+  const globalColorsVariablesFile = path.join(__dirname, './demo/style.scss');
+  const backupVariablesFile = path.join(__dirname, './demo/style_BKP.scss');
 
   function createBackup() {
     _manageBackup(globalColorsVariablesFile, backupVariablesFile);
@@ -55,13 +55,14 @@ const startModule = (function startModule() {
   function shuffleColors() {
     let colors = [];
     let fileContent = '';
-    const hexColorRegex = /(#\w{6})/g;
+    const hexColorRegex = /(#\w{6})(;?)(( *\/\/)( *)(disable smart-colors))?/g;
     // Gets current colors from file and shuffles them
     fse.createReadStream(globalColorsVariablesFile)
       .on('data', (chunk) => { fileContent += chunk; })
       .on('end', () => {
-        colors = fileContent.match(hexColorRegex);
-console.log(colors);
+        colors = fileContent.match(hexColorRegex).filter(color => !(/(disable smart-colors)/g).test(color));
+        colors = colors.map(color => color.substr(0, 7));
+
         for (let i = colors.length; i; --i) {
           const j = Math.floor(Math.random() * i);
           [colors[i - 1], colors[j]] = [colors[j], colors[i - 1]];

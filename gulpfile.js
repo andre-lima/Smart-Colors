@@ -22,7 +22,7 @@ gulp.task('lib', function lib() {
 });
 
 gulp.task('demo', function demo() {
-  return gulp.src('./demo/colors.scss')
+  return gulp.src('./demo/style.scss')
     .pipe(sass({
       style: 'expanded',
       errLogToConsole: true

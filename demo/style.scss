@@ -1,0 +1,260 @@
+$color_background : #EEEEEE;  // disable smart-colors 
+$color_h1 : #9B4136;
+$color-h2: #335230;
+$colorText :#E5D260;
+$color_details: #9B4136;
+$color_interactive : #2F343F;
+$color_footer : #274788;
+$color_important : #E02690;     //disable smart-colors   
+
+//Shouldn't be replaced since it fails the Regex test
+$color : black;
+
+
+html {
+  background-color: $color_background;
+}
+
+.container {
+  box-sizing: border-box;
+  margin: 10px 0px 10px 0px;
+  padding: 0px;
+  border: 10px solid $color_details;
+  width: 100%;
+}
+
+body {
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  
+  max-width: 1050px;
+  width: 95vw;
+  margin: 0px auto;
+}
+
+header {
+  width: 100%;
+}
+
+header {
+  padding-top: 1px;
+}
+
+header, article, h1 {
+  color: $color_h1;
+  background-color: darken($color_background, 10%);
+}
+
+article header {
+  color: $color_h1;
+}
+
+h3 {
+  color: $color-h2;
+}
+
+header nav ul li a {
+  font-size: 100%;
+}
+
+a:link {
+  color: $color_details;
+  text-decoration: none;
+}
+
+a:visited {
+  color: $color_details;
+}
+
+a:hover {
+    color: $color_important;
+}
+
+h1,
+h2,
+h3 {
+  margin: 1px 10px;
+  font-family: 'Gochi Hand', cursive;
+  font-size: 1.8em;
+  letter-spacing: 0.0em;
+  word-spacing: 0.4em;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+p,
+li {
+  font-family: 'Bitter', serif;
+  margin: 1px 3px;
+  padding: 2px;
+  list-style-type: none;
+  color: $colorText;
+}
+
+figure,
+figcaption,
+header {
+  margin: 0px auto;
+}
+
+figcaption {
+  position: relative;
+  margin-left: 15px;
+  bottom: 60px;
+  bottom: calc(10px + 11vw);
+  height: 0px;
+}
+
+figcaption h2 {
+  width: 80%;
+  font-size: calc(40% + 1.2vw);
+  
+  padding: 5px 15px;
+  color: $color-h2;
+  background-color: rgba(0,0,0,0.3);
+  
+}
+
+#main-photo {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+#top-nav li {
+  flex: 0 1 auto;
+  margin: 0px 10px;
+}
+
+#top-nav li:last-child {
+  margin-left: auto;
+}
+
+#top-nav {
+  justify-content: space-between;
+}
+
+#title {
+  margin: 30px 50px;
+}
+
+main.flex {
+  flex-wrap: wrap;
+  width: 70%;
+  flex: 1 1 75%;
+}
+
+main article {
+  /*width: 45%;*/
+  flex: 1 1 200px;
+}
+
+main article:nth-child(1) {
+  flex: 1 1 100%;
+}
+
+article {
+  margin: 5px 2.5px 0px 2.5px;
+  padding: 12px;
+  flex-flow: column;
+}
+
+article p {
+  flex: 1;
+}
+
+div {
+  margin: -2.5px ;
+}
+
+button {
+  display: block;
+  padding: 5px;
+  margin: 10px;
+  
+  align-self: flex-end;
+}
+
+nav {
+  padding: 5px;
+  margin: 0px;
+  background-color: $color_interactive;
+}
+
+aside {
+  margin: 5px 2.5px 0px 2.5px;
+
+  flex: 1 1 200px;
+  background-color: $color_interactive;
+  
+}
+
+aside nav ul li {
+  text-align: center;
+  box-sizing: border-box;
+  flex: 1 0 120px;
+  margin: 3px 0px;
+
+}
+
+aside nav ul li:first-child {
+  margin-top: 10px;
+  flex: 1 1 100%;
+}
+
+aside nav ul li:last-child {
+  margin-bottom: 10px;
+  
+}
+
+
+footer nav {
+  background-color: inherit;
+  color: inherit;
+}
+
+footer {
+  background-color: $color_footer;
+  color: $colorText;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+footer {
+  margin-top: 5px;
+}
+
+footer nav ul {
+  justify-content: center;
+  border-bottom: 1px solid $color_details;
+}
+
+footer nav ul li {
+  flex: 0 1 130px;
+}
+
+footer nav ul li a, p {
+  display: block;
+  text-align: center;
+}
+
+footer p {
+  font-size: 80%;
+  margin-bottom: 10px;
+}
+
+footer nav {
+  flex: 1;
+}

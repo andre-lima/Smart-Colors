@@ -2,19 +2,112 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title> - RANDOM COLORS - </title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel='stylesheet' href="colors.css" >
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Type a description here">
+  <meta name="keywords" content="page, product, sale, buy, sell">
+  <meta name="language" content="english">
+  <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
+
+  <title>Simple Page</title>
 </head>
 
-<body>
-  <h1 class='h1'>RANDOM COLORS</h1>
-  <h2 class='h2'>Still less ugly than when you do it by yourself!</h2>
-  <p class='text'>Testing this package</p>
-  <input class='button' type='button' value='Confirm this is awesome'/>
+<body class="flex">
+  <div class="container">
+
+    <header>
+      <h1 id="title">Simple <span>Awesome</span> page</h1>
+      <nav>
+        <ul id="top-nav" class="flex">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Gallery</a></li>
+          <li><a href="">Login</a></li>
+        </ul>
+      </nav>
+
+      <figure>
+        <img id="main-photo" alt="Awesome Slogan image" src="http://placekitten.com/1050/240" />
+        <figcaption>
+          <h2>Simply, the best slogan ever!</h2>
+        </figcaption>
+      </figure>
+    </header>
+
+    <div class="flex">
+      <main class="flex">
+        <article class="flex">
+          <header>
+            <h2>Welcome to something!</h2>
+          </header>
+
+          <p> Bacon ipsum dolor amet ball tip drumstick salami ribeye, andouille frankfurter flank jowl pig short ribs cow turducken.
+            Prosciutto meatloaf kevin ground round. Ribeye rump cow pig pork chop, drumstick beef ribs short loin.</p>
+        </article>
+
+        <article class="flex">
+          <header>
+            <h3>What's New</h3>
+          </header>
+
+          <p> Bacon ipsum dolor amet ball tip drumstick salami ribeye, andouille frankfurter flank jowl pig short ribs cow turducken.
+            Prosciutto meatloaf kevin ground round. Ribeye rump cow pig pork chop, drumstick beef ribs short loin.</p>
+
+          <button type="button">Read more...</button>
+
+        </article>
+
+        <article class="flex">
+          <header>
+            <h3>Resources</h3>
+          </header>
+
+          <p> Bacon ipsum dolor amet ball tip drumstick salami ribeye, andouille flank jowl pig short ribs cow turducken. Prosciutto
+            meatloaf kevin ground round. Ribeye rump cow pig pork chop, beef ribs short loin.</p>
+
+          <button type="button">Read more...</button>
+
+        </article>
+      </main>
+
+
+      <aside>
+        <nav>
+          <ul class="flex">
+            <li>
+              <h3>Navigation</h3>
+            </li>
+            <li><a href="">Link 1</a></li>
+            <li><a href="">Link 2</a></li>
+            <li><a href="">Link 3</a></li>
+            <li><a href="">Link 4</a></li>
+            <li><a href="">Link 5</a></li>
+            <li><a href="">Link 6</a></li>
+            <li><a href="">Link 7</a></li>
+            <li><a href="">Link 8</a></li>
+          </ul>
+        </nav>
+      </aside>
+    </div>
+
+
+    <footer class="flex">
+      <nav>
+        <ul class="flex">
+          <li class="line"><a href="">Home</a></li>
+          <li class="line"><a href="">About</a></li>
+          <li class="line"><a href="">Contact</a></li>
+        </ul>
+      </nav>
+
+      <p>Copyright (not really) 2015 - Designed by Andre Dantas.
+        <br> This is actually CC0, so use it however you want
+      </p>
+    </footer>
+  </div>
 </body>
 
 </html>
